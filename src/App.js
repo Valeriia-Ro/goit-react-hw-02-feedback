@@ -26,9 +26,9 @@ class App extends React.Component {
   };
 
   varietyOfFeedback = (e) => {
-      const {reaction} = e.target;
+      const {name} = e.target;
       this.setState((prevState) => ({
-          [reaction]: prevState[reaction] + 1,
+          [name]: prevState[name] + 1,
     }));
   }
 
@@ -53,7 +53,7 @@ class App extends React.Component {
             <Container>
                  
                 <FeedbackOptions  
-                    onleaveFeedback = {this.varietyOfFeedback}
+                    onLeaveFeedback = {this.varietyOfFeedback}
                     options = {Object.keys(this.state)}
                     
                 />
